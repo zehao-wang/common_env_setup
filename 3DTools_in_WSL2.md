@@ -36,7 +36,7 @@ export XDG_SESSION_TYPE=x11
 echo 'export XDG_SESSION_TYPE=x11' >> ~/.bashrc
 
 # Test
-python -c "import open3d as o3d; mesh=o3d.geometry.TriangleMesh.create_sphere(); mesh.compute_vertex_normals(); o3d.visualization.draw_geometries([mesh])
+python -c "import open3d as o3d; mesh=o3d.geometry.TriangleMesh.create_sphere(); mesh.compute_vertex_normals(); o3d.visualization.draw_geometries([mesh])"
 
 ```
 This test case can display the following window
