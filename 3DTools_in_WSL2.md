@@ -41,3 +41,15 @@ python -c "import open3d as o3d; mesh=o3d.geometry.TriangleMesh.create_sphere();
 ```
 This test case can display the following window
 ![](./assets/o3d_test_sphere.png)
+
+## 3. Key library verification
+```bash
+# check cuda correctly recognized by pytorch
+python -c "import torch; print('CUDA is available: ', torch.cuda.is_available())"
+
+# check matplotlib can show interactive window on host machine
+python -c "import matplotlib.pyplot as plt; plt.plot([1,2,3]); plt.show()"
+
+# check open3d can show interactive window on host machine
+python -c "import open3d as o3d; mesh=o3d.geometry.TriangleMesh.create_sphere(); mesh.compute_vertex_normals(); o3d.visualization.draw_geometries([mesh])"
+```
